@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Host</title>
+</head>
+<body>
+
+  <h1>Host Panel</h1>
+
+  <button onclick="hostGame()">Host Game</button>
+
+  <h2>Game Code:</h2>
+  <div id="gameCode">----</div>
+
+  <br>
+  <button onclick="socket.emit('startQuestion', gameCode)">
+    Start Question
+  </button>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="client.js"></script>
+</body>
+</html>
