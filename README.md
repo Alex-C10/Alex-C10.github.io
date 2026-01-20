@@ -4,3 +4,6 @@ Need to do
 3. Make question save for the quiz and future ones if needed
 4. Make it where host can kick people
 5. Makie it where host screen is different then players screen
+
+Changes
+1. merged host.html to main so delete host.html julian
