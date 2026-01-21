@@ -1,16 +1,57 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Answer</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Player</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="container">
+    <div id="scoreDisplay" class="score">Your Score: 0</div>
+    
+    <!-- Question submission section (shown before game starts) -->
+    <div id="submitSection">
+      <h1>Submit Your Questions</h1>
+      <p>Create questions for the quiz while waiting for the game to start!</p>
+      <input id="questionTextInput" placeholder="Question text">
+      <input id="optA" placeholder="Option A">
+      <input id="optB" placeholder="Option B">
+      <input id="optC" placeholder="Option C">
+      <input id="optD" placeholder="Option D">
+      <select id="correctOpt">
+        <option value="A">Correct: A</option>
+        <option value="B">Correct: B</option>
+        <option value="C">Correct: C</option>
+        <option value="D">Correct: D</option>
+      </select>
+      <button onclick="submitQuestion()">Submit Question</button>
+    </div>
+  </div>
 
-  <h1>Answer</h1>
+  <!-- Fullscreen Quiz section (shown once game starts) -->
+  <div id="quizSection" class="quiz-fullscreen hidden">
+    <div class="quiz-header">
+      <div id="timerDisplay" class="timer">20</div>
+      <div id="scoreDisplayQuiz" class="score-floating">0 pts</div>
+    </div>
+    <h1 id="questionText" class="big-question">Waiting for question...</h1>
+    <div class="answer-grid-fullscreen">
+      <button class="answer-btn-full a" id="btnA">A</button>
+      <button class="answer-btn-full b" id="btnB">B</button>
+      <button class="answer-btn-full c" id="btnC">C</button>
+      <button class="answer-btn-full d" id="btnD">D</button>
+    </div>
+  </div>
 
-  <button onclick="sendAnswer('A')">A</button>
-  <button onclick="sendAnswer('B')">B</button>
-  <button onclick="sendAnswer('C')">C</button>
-  <button onclick="sendAnswer('D')">D</button>
+  <!-- Result screen (shown after answering or time runs out) -->
+  <div id="resultSection" class="result-fullscreen hidden">
+    <div id="resultScoreDisplay" class="score-floating">0 pts</div>
+    <div id="resultIcon" class="result-icon">✓</div>
+    <h1 id="resultText" class="result-text">Correct!</h1>
+    <p id="resultDetails" class="result-details">The answer was A</p>
+    <p class="waiting-text">Waiting for next question...</p>
+  </div>
 
   <script src="/socket.io/socket.io.js"></script>
   <script src="client.js"></script>
