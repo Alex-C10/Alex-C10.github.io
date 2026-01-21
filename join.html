@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Join Game</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="theme.js"></script>
+</head>
+<body>
+  <div class="container fullscreen-container">
+    <a href="/" class="back-link">← Back</a>
+    <h1 class="page-title">Join Game</h1>
+    <input id="name" class="big-input" placeholder="Your name" autocomplete="off">
+    <input id="code" class="big-input" placeholder="Game code" autocomplete="off" maxlength="6">
+    <button class="big-btn" onclick="joinGame()">Join</button>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="client.js"></script>
+</body>
+</html>
