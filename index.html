@@ -1,15 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Join</title>
+  <meta charset="UTF-8">
+  <title>Join Game</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-  <h1>Join Game</h1>
-
-  <input id="name" placeholder="Your name">
-  <input id="code" placeholder="Game code">
-  <button onclick="joinGame()">Join</button>
+  <div class="container">
+    <h1>Join Game</h1>
+    <input id="name" placeholder="Your name">
+    <input id="code" placeholder="Game code">
+    <button onclick="joinGame()">Join</button>
+  </div>
 
   <script src="/socket.io/socket.io.js"></script>
   <script src="client.js"></script>
