@@ -2,18 +2,26 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Join Game</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Class Quiz</title>
   <link rel="stylesheet" href="style.css">
+  <script src="theme.js"></script>
 </head>
 <body>
-  <div class="container">
-    <h1>Join Game</h1>
-    <input id="name" placeholder="Your name">
-    <input id="code" placeholder="Game code">
-    <button onclick="joinGame()">Join</button>
+  <div class="container landing">
+    <h1 class="landing-title"> Class Quiz</h1>
+    <p class="landing-subtitle">Test your knowledge!</p>
+    
+    <div class="landing-buttons">
+      <a href="/join.html" class="landing-btn play">
+        <span class="btn-icon"></span>
+        <span class="btn-text">Play Game</span>
+      </a>
+      <a href="/host.html" class="landing-btn host">
+        <span class="btn-icon"></span>
+        <span class="btn-text">Host Game</span>
+      </a>
+    </div>
   </div>
-
-  <script src="/socket.io/socket.io.js"></script>
-  <script src="client.js"></script>
 </body>
 </html>
