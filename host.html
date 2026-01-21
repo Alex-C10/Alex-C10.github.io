@@ -1,23 +1,38 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Host</title>
+  <meta charset="UTF-8">
+  <title>Host Game</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="container">
+    <h1>Host Panel</h1>
+    <button onclick="hostGame()">Host Game</button>
+    <button onclick="startGame()">Start Game</button>
 
-  <h1>Host Panel</h1>
+    <h2>Game Code:</h2>
+    <div id="gameCode" class="game-code">----</div>
 
-  <button onclick="hostGame()">Host Game</button>
+    <h2>Players:</h2>
+    <ul id="playerList"></ul>
 
-  <h2>Game Code:</h2>
-  <div id="gameCode">----</div>
+    <h2>Approved Questions: <span id="questionCount">0</span></h2>
 
-  <br>
-  <button onclick="socket.emit('startQuestion', gameCode)">
-    Start Question
-  </button>
+    <h2>Pending Questions:</h2>
+    <div id="pendingList"></div>
+
+    <hr>
+    <h2>Game Status</h2>
+    <div id="currentQuestion">Not started</div>
+    <button onclick="startNextQuestion()">Next Question</button>
+
+    <h2>Leaderboard:</h2>
+    <ol id="leaderboard"></ol>
+  </div>
 
   <script src="/socket.io/socket.io.js"></script>
   <script src="client.js"></script>
 </body>
 </html>
+
