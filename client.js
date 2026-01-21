@@ -6,7 +6,7 @@ const path = window.location.pathname;
 // =====================
 // JOIN PAGE
 // =====================
-if (path.endsWith("index.html")) {
+if (path.endsWith("join.html")) {
   function joinGame() {
     playerName = document.getElementById("name").value.trim();
     gameCode = document.getElementById("code").value.trim();
@@ -267,7 +267,8 @@ if (path.endsWith("player.html")) {
     document.getElementById("resultIcon").innerText = "🏆";
     document.getElementById("resultText").innerText = "Game Over!";
     document.getElementById("resultDetails").innerText = "Thanks for playing!";
-    document.querySelector(".waiting-text").innerText = "Final scores are in!";
+    document.getElementById("waitingText").innerText = "Final scores are in!";
+    document.getElementById("newGameBtn").classList.remove("hidden");
   });
 
   socket.on("yourScore", (score) => {
