@@ -1,9 +1,16 @@
 const express = require("express");
 const app = express();
 const http = require("http").createServer(app);
-const io = require("socket.io")(http);
 
-const PORT = 3000;
+// Allow socket.io to accept CORS from your frontend (change origin to your Netlify domain in production)
+const io = require("socket.io")(http, {
+  cors: {
+    origin: "*", // for testing keep "*"; for production replace with your site like "https://your-site.netlify.app"
+    methods: ["GET", "POST"]
+  }
+});
+
+const PORT = process.env.PORT || 3000;
 
 app.use(express.static("public"));
 
