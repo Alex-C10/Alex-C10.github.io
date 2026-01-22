@@ -1,7 +1,6 @@
-const socket = io();
-let gameCode = null;
-let playerName = null;
-const path = window.location.pathname;
+// CHANGE: allow connecting to an external deployed server by setting window.SERVER_URL in HTML
+const SERVER_URL = window.SERVER_URL || null;
+const socket = SERVER_URL ? io(SERVER_URL) : io(); // if SERVER_URL is set, connect to it; otherwise use same-origin
 
 // =====================
 // JOIN PAGE
