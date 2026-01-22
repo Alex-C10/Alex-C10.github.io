@@ -43,8 +43,13 @@
     <button class="action-btn primary" onclick="startNextQuestion()">Next Question</button>
   </div>
 
-  <script src="/socket.io/socket.io.js"></script>
+  <!-- CHANGE: set your deployed server URL here and load socket.io from CDN -->
+  <script>
+    // Replace the value below with your deployed server URL (include https://).
+    // Example: window.SERVER_URL = "https://class-quiz-server.onrender.com";
+    window.SERVER_URL = "https://YOUR_DEPLOYED_SERVER_URL";
+  </script>
+  <script src="https://cdn.socket.io/4.6.1/socket.io.min.js" crossorigin="anonymous"></script>
   <script src="client.js"></script>
 </body>
 </html>
-
