@@ -1,9 +1,2 @@
-Need to do
-1. finish front end website
-2. make it where someone can host and the rest of people can join that could (CAN NOT BE LOCAL)
-3. Make question save for the quiz and future ones if needed
-4. Make it where host can kick people
-5. Makie it where host screen is different then players screen
-
-Changes
-1. merged host.html to main so delete host.html julian
+Need to Do
+1. Add AI so that questions can be filled in if you just add the catageory
